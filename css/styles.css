@@ -6,14 +6,19 @@ body {
   font-size: 15px;
   font-family: "League Spartan", sans-serif;
   font-weight: 500;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  padding-top: 15vh;
 }
 
 .container {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 3em auto;
+  margin: 0 auto;
   width: 80%;
+  height: 60%;
   max-width: 880px;
   text-align: center;
 }
@@ -129,6 +134,9 @@ body {
   .container {
     flex-direction: row;
     flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
   }
 
   .container::before {
@@ -140,6 +148,68 @@ body {
   .container::after {
     background-image: url(../images/bg-pattern-bottom-desktop.svg);
     height: 50%;
+    width: 70%;
+  }
+  .page-header {
+    width: 30%;
+    text-align: left;
+  }
+
+  .top-5-stars {
     width: 60%;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .top-5-stars :first-child {
+    align-self: flex-start;
+  }
+
+  .top-5-stars :last-child {
+    align-self: flex-end;
+  }
+
+  .top-5-stars__location {
+    display: flex;
+    align-items: center;
+    vertical-align: middle;
+    padding: 1em;
+    width: 80%;
+  }
+
+  .top-5-stars__stars-icon {
+    margin-bottom: 0em;
+  }
+
+  .top-5-stars__stars-icon:not(:first-child) {
+    margin-left: 0.5em;
+  }
+
+  .top-5-stars__location-text {
+    margin-left: 1.5em;
+  }
+
+  .reviews {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 300px;
+  }
+
+  .reviews :first-child {
+    align-self: flex-start;
+  }
+
+  .reviews :last-child {
+    align-self: flex-end;
+  }
+
+  .card {
+    margin: 0.5em 0;
+  }
+
+  .card:not(:first-child) {
+    margin-left: 1em;
   }
 }
