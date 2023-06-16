@@ -1,0 +1,145 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 15px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: 500;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 3em auto;
+  width: 80%;
+  max-width: 880px;
+  text-align: center;
+}
+
+.container::before {
+  content: " ";
+  position: fixed;
+  background-image: url(../images/bg-pattern-top-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  top: 0;
+  left: 0;
+  height: 40%;
+  width: 100%;
+}
+
+.container::after {
+  content: " ";
+  position: fixed;
+  background-image: url(../images/bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  bottom: 0;
+  right: 0;
+  height: 40%;
+  width: 100%;
+}
+
+.page-header {
+  margin-top: 2em;
+}
+
+.page-header__title {
+  font-weight: bold;
+  color: hsl(300, 43%, 22%);
+  font-size: 2.5rem;
+  margin-bottom: 0.5em;
+}
+
+.page-header_presentation {
+  color: hsl(303, 10%, 53%);
+  margin-bottom: 2em;
+}
+
+.top-5-stars {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.top-5-stars__location {
+  background-color: hsl(300, 24%, 96%);
+  border-radius: 0.5em;
+  margin: 0.5em 0;
+  padding: 1em 0;
+}
+
+.top-5-stars__stars-icon {
+  margin-bottom: 0.7em;
+}
+
+.top-5-stars__location-text {
+  font-weight: bold;
+  color: hsl(300, 43%, 22%);
+}
+
+.reviews {
+  margin-bottom: 1em;
+}
+
+.card {
+  background-color: hsl(300, 43%, 22%);
+  border-radius: 0.5em;
+  margin: 1em 0;
+  padding: 2em 1.5em;
+  text-align: left;
+}
+
+.card__reviewer {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2em;
+}
+
+.card__reviewer-photo {
+  border-radius: 50%;
+  width: 15%;
+  margin-right: 1.2em;
+}
+
+.card__reviewer-name {
+  color: hsl(0, 0%, 100%);
+  margin-bottom: 0.2em;
+}
+
+.card__reviewer-status {
+  color: hsl(333, 80%, 67%);
+}
+
+.card__review {
+  color: hsl(0, 0%, 100%);
+  line-height: 1.3em;
+  font-weight: 400;
+}
+
+.attribution {
+  position: relative;
+  width: 100%;
+  margin: 2em auto;
+}
+
+@media screen and (min-width: 660px) {
+  .container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .container::before {
+    background-image: url(../images/bg-pattern-top-desktop.svg);
+    height: 50%;
+    width: 40%;
+  }
+
+  .container::after {
+    background-image: url(../images/bg-pattern-bottom-desktop.svg);
+    height: 50%;
+    width: 60%;
+  }
+}
